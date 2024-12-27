@@ -330,7 +330,6 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
-  net-smtp
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
@@ -342,7 +341,6 @@ DEPENDENCIES
   sqlite3 (>= 2.1)
   stimulus-rails
   thruster
-  timeout
   turbo-rails
   tzinfo-data
   web-console
