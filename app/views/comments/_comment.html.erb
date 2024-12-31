@@ -1,0 +1,20 @@
+<div class="comment-<%= comment.id%>">
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <div>
+          <strong>Posted by: <%= comment.user.name %></strong>
+          <small>Posted at : <%= comment.created_at.strftime("%B %d, %Y") %></small>
+        </div>
+        <% if current_user == comment.user %>
+          <div>
+            <%= link_to "Edit", edit_post_comment_path(comment.post, comment) %>
+            <%= button_to "Delete", [post, comment], class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+        <% end %>
+      </div>
+      <div>
+        <%= comment.body %>
+      </div>
+    </div>
+  </div> 
